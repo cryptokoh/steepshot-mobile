@@ -6,17 +6,19 @@ using Android.Util;
 
 namespace Steepshot.CustomViews
 {
-    public class MediaPager : ViewPager
+    public class MediaViewPager : ViewPager
     {
         public int Radius { get; set; }
-        public MediaPager(Context context, IAttributeSet attrs) : base(context, attrs)
+
+
+        public MediaViewPager(Context context, IAttributeSet attrs) : base(context, attrs)
         {
         }
 
         protected override void OnDraw(Canvas canvas)
         {
             base.OnDraw(canvas);
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
+            if (Radius > 0 && Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
             {
                 canvas.DrawFilter = new PaintFlagsDrawFilter(PaintFlags.AntiAlias, PaintFlags.AntiAlias);
 

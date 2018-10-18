@@ -174,7 +174,7 @@ namespace Steepshot.Adapter
             postHeader.SetLayerType(LayerType.Hardware, null);
             postFooter.SetLayerType(LayerType.Hardware, null);
 
-            ((MediaPager)PhotosViewPager).Radius = (int)BitmapUtils.DpToPixel(10, Context.Resources);
+            ((MediaViewPager)PhotosViewPager).Radius = (int)BitmapUtils.DpToPixel(10, Context.Resources);
 
             NsfwMask.ViewTreeObserver.GlobalLayout += ViewTreeObserverOnGlobalLayout;
         }

@@ -145,7 +145,7 @@ namespace Steepshot.Adapter
         private readonly TextView _likeScalePower;
 
         protected readonly Context Context;
-        protected readonly ViewPager PhotosViewPager;
+        protected readonly MediaViewPager PhotosViewPager;
         protected readonly RelativeLayout NsfwMask;
         protected readonly TextView NsfwMaskSubMessage;
 
@@ -162,7 +162,7 @@ namespace Steepshot.Adapter
             _avatar = itemView.FindViewById<CircleImageView>(Resource.Id.profile_image);
             _author = itemView.FindViewById<TextView>(Resource.Id.author_name);
             itemView.FindViewById<ImageView>(Resource.Id.gallery);
-            PhotosViewPager = itemView.FindViewById<ViewPager>(Resource.Id.post_photos_pager);
+            PhotosViewPager = itemView.FindViewById<MediaViewPager>(Resource.Id.post_photos_pager);
             _pagerTabLayout = ItemView.FindViewById<TabLayout>(Resource.Id.dot_selector);
             _pagerTabLayout.SetupWithViewPager(PhotosViewPager, true);
 
